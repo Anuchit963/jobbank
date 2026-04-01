@@ -6,18 +6,17 @@ let school = document.getElementById("school").value;
 let gender = document.querySelector('input[name="genderRad"]:checked');
 let days = document.getElementById("workDays").value.trim();
 if(!nid || !fname || !lname || !year || !school || !gender || !days){
- 
 	alert("Please fill all fields!");
   return false;
 
 }
 function checkNID() {
-  let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
+let nid = (document.getElementById("nid").value).trim();
+if (isNaN(nid) || nid.length !== 13) {
 	return false;
-  }else{
+	} else {
 	return true;
-  }
+}
 }
 
 function checkWorkDays() {
