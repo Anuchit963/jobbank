@@ -46,8 +46,8 @@ function validateForm(){
 			alert("Please select gender!");
 	return false;
 		}else{
-			total = payRateCalculate();
-			alert("Your weekly pay rate is "+total+" THB");
+		let total = payRateCalculate();
+			alert("Your weekly pay is " + total + " THB");
 	return false;
 			}
 		}
