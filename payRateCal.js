@@ -6,5 +6,3 @@ function payRateCalculate() {
   
   return 0;
 }
-
-

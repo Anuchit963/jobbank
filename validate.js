@@ -20,12 +20,15 @@ if (isNaN(nid) || nid.length !== 13) {
 }
 
 function checkWorkDays() {
-  let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
-  }
+let num = document.getElementById("workDays").value.trim();
+	if (isNaN(num)) {
+		return false;
+	}
+		num = parseInt(num);
+	if (num <= 1 || num > 6) {
+		return false;
+	}
+return true;
 }
 
 function validateForm(){
