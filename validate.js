@@ -1,3 +1,16 @@
+let nid = document.getElementById("nid").value.trim();
+let fname = document.getElementById("fname").value.trim();
+let lname = document.getElementById("lname").value.trim();
+let year = document.getElementById("year").value;
+let school = document.getElementById("school").value;
+let gender = document.querySelector('input[name="genderRad"]:checked');
+let days = document.getElementById("workDays").value.trim();
+if(!nid || !fname || !lname || !year || !school || !gender || !days){
+ 
+	alert("Please fill all fields!");
+  return false;
+
+}
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
   if(isNaN(nid)){
