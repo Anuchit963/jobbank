@@ -30,18 +30,23 @@ function checkWorkDays() {
 
 function validateForm(){
 	if(!checkNID()){
-	  alert("Invalid value for National ID!");
-	  document.getElementById("nid").focus();
-	  return false;
-	}else{
+		alert("Invalid value for National ID!");
+			document.getElementById("nid").focus();
+		return false;
+		}else{
 		if(!checkWorkDays()){
-		  alert("Invalid value for days of work!");
-		  document.getElementById("workDays").focus();
-		  return false;
+			alert("Invalid value for days of work!");
+				document.getElementById("workDays").focus();
+	return false;
+		}else{
+		if(!checkGender()){
+			alert("Please select gender!");
+	return false;
 		}else{
 			total = payRateCalculate();
 			alert("Your weekly pay rate is "+total+" THB");
-			return false;
+	return false;
+			}
 		}
 	}
 }
